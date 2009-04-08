@@ -1,4 +1,5 @@
 require 'lolspeak'
+require 'hpricot'
 
 module Rack
   module Contrib
