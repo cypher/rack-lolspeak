@@ -10,7 +10,8 @@ module Rack
       def call(env)
         status, headers, body = @app.call(env)
 
-        if headers['Content-Type'] == 'text/html'
+        case headers['Content-Type']
+        when 'text/plain'
           body = body.to_lolspeak
           headers['Content-Length'] = body.size.to_s
         end
