@@ -17,8 +17,7 @@ context "Rack::Contrib::ICanHazLOLCode" do
   context 'text/html' do
     page_title = "This is the document's title"
     title = "Glorious title of document!"
-    div = "Here is the content of a div, which is going to be lolcatted"
-    paragraph = ""
+    paragraph = "This is a paragraph<br />with multiple lines<br />in it."
     app = lambda do |env|
       body = <<"HTML"
 <html>
@@ -28,7 +27,6 @@ context "Rack::Contrib::ICanHazLOLCode" do
   <body>
     <h1>#{title}</h1>
     <div>
-      #{div}
       <p>
         #{paragraph}
       </p>
@@ -56,7 +54,6 @@ HTML
 
       doc = Hpricot(body)
       doc.search('h1').inner_html.should.equal title.to_lolspeak
-      doc.search('div').inner_html.should.equal div.to_lolspeak
       doc.search('p').inner_html.should.equal paragraph.to_lolspeak
     end
 
@@ -69,6 +66,7 @@ HTML
       doc.search('h1').should.not.equal nil
       doc.search('div').should.not.equal nil
       doc.search('p').should.not.equal nil
+      doc.search('br').should.not.equal nil
     end
   end
 end
