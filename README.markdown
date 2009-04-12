@@ -1,6 +1,6 @@
 # rack-lolspeak
 
-Transforms any text to lolspeak. Leaves HTML markup untouched (in theory).
+Transforms (english) text to lolspeak. Leaves HTML markup untouched (in theory).
 
 ## Copyright
 
