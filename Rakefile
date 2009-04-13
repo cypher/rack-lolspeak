@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rack-lolspeak"
-    gem.summary = %Q{TODO}
+    gem.summary = %Q{Rack Middleware that transforms any (english) text to lolspeak}
     gem.email = "markus.prinz@nuclearsquid.com"
     gem.homepage = "http://github.com/cypher/rack-lolspeak"
     gem.authors = ["Markus Prinz"]
