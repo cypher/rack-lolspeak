@@ -9,6 +9,8 @@ begin
     gem.email = "markus.prinz@nuclearsquid.com"
     gem.homepage = "http://github.com/cypher/rack-lolspeak"
     gem.authors = ["Markus Prinz"]
+    gem.add_dependency('rack', '>=0.9.1')
+    gem.add_dependency('lolspeak', '>=1.0.0')
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
